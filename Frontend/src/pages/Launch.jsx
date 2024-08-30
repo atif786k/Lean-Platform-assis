@@ -1,7 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./style/style.css";
 import Timer from "../components/Timer";
 import BlobAnimation from "../components/BlobAnimation";
+import rocketSvg from "../assets/rocket.svg";
+import darkRocketSvg from "../assets/darkrocket.svg";
+import revealSvg from "../assets/reveal.svg";
+import darkRevealSvg from "../assets/darkreveal.svg";
+
 
 const Launch = ({ timerValue, mode }) => {
   const [errorMsg, setErrorMsg] = useState("");
@@ -77,11 +82,11 @@ const Launch = ({ timerValue, mode }) => {
           <div className="main-content space-y-6">
             <div className="main-content-title">
               {mode === true ? (
-                <img src="/src/assets/darkrocket.svg" alt="Rocket SVG" />
+                <img src={darkRocketSvg} alt="Rocket SVG" />
               ) : (
                 <img
                   id="rocket1"
-                  src="/src/assets/rocket.svg"
+                  src={rocketSvg}
                   alt="Rocket SVG"
                 />
               )}
@@ -108,9 +113,9 @@ const Launch = ({ timerValue, mode }) => {
           </div>
           <h2 className="glowing-text">
             {mode === true ? (
-              <img src="/src/assets/darkreveal.svg" alt="Reveal SVG" />
+              <img src={darkRevealSvg} alt="Reveal SVG" />
             ) : (
-              <img src="/src/assets/reveal.svg" alt="Reveal SVG" />
+              <img src={revealSvg} alt="Reveal SVG" />
             )}
           </h2>
 
