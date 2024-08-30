@@ -59,7 +59,7 @@ function App() {
               path="/card"
               element={<LaunchCard mode={mode} />}
             ></Route>
-            <Route exact path="/module" element={<Module />}></Route>
+            <Route exact path="/module" element={<Module mode={mode}/>}></Route>
           </Routes>
         </Router>
         {timerInputCard && (
