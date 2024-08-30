@@ -1,0 +1,12 @@
+.app-container{
+    width: 100vw;
+    height: 100vh;
+    background-color: #0f0f0f;
+    color: #ffffff;
+    position: relative;
+    transition: all ease-in 0.3s;
+}
+.app-container.light-theme {
+    background-color: #ffffff; 
+    color: #0f0f0f; 
+  }
