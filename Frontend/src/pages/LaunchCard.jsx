@@ -1,6 +1,5 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import "./style/style.css";
-import BlobAnimation from "../components/BlobAnimation";
 import { gsap } from "gsap";
 import { useNavigate, Link } from "react-router-dom";
 
@@ -23,7 +22,6 @@ const LaunchCard = ({ mode }) => {
   }, [navigate]);
   return (
     <div className="launch-container">
-      <BlobAnimation />
       <div className="content-wrapper">
         <img
           className="absolute z-10"
@@ -48,7 +46,7 @@ const LaunchCard = ({ mode }) => {
         </nav>
         <div
           ref={cardRef}
-          className={`launch-card space-y-[72px] ${
+          className={`launch-card space-y-12 lg:space-y-[72px] ${
             mode === true ? "bg-light-gradient" : "bg-dark-gradient"
           }`}
         >

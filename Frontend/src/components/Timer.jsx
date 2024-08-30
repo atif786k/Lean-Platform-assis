@@ -32,7 +32,9 @@ const Timer = ({ timerValue, mode }) => {
   return (
     <div
       className={`timer-container ${
-        displayTime.hours > 0 ? "w-[672px]" : "w-[434px]"
+        displayTime.hours > 0
+          ? "w-[323px] lg:w-[672px]"
+          : "w-[220px] lg:w-[434px]"
       } ${mode === true ? "bg-light-gradient" : "bg-dark-gradient"}`}
     >
       {displayTime.hours > 0 && (

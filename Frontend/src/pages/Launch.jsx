@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./style/style.css";
 import Timer from "../components/Timer";
-import BlobAnimation from "../components/BlobAnimation";
 import rocketSvg from "../assets/rocket.svg";
 import darkRocketSvg from "../assets/darkrocket.svg";
 import revealSvg from "../assets/reveal.svg";
@@ -57,7 +56,6 @@ const Launch = ({ timerValue, mode }) => {
 
   return (
     <div className={`launch-container ${mode ? "light-theme" : "dark-theme"}`}>
-      <BlobAnimation />
       <div className="content-wrapper">
         <nav className="navigation">
           <h2 className="nav-heading">
@@ -129,7 +127,7 @@ const Launch = ({ timerValue, mode }) => {
               Be the first to know! Share your email and We'll notify you when
               it's live
             </h4>
-            <div className="email-box relative flex items-center justify-center space-x-[14px]">
+            <div className="email-box relative flex flex-col items-center space-y-3 lg:space-y-0 lg:flex-row lg:justify-center lg:space-x-[14px]">
               <input
                 type="email"
                 name="email"
@@ -193,7 +191,7 @@ const Launch = ({ timerValue, mode }) => {
                 )}
               </button>
               {!isEmailValid && (
-                <h4 className="absolute -bottom-8 left-24 text-xl text-[#FD443A] font-medium ">
+                <h4 className="absolute -bottom-8 left-4 lg:left-24 text-xl text-[#FD443A] font-medium ">
                   {errorMsg}
                 </h4>
               )}
