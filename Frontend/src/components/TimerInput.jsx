@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./style/style.css"
+import "./style/style.css";
 import { RiCloseLargeFill } from "react-icons/ri";
 
 const TimerInput = ({ setFunction, onCancel }) => {
@@ -24,12 +24,13 @@ const TimerInput = ({ setFunction, onCancel }) => {
         <input
           type="number"
           className="input-timer"
-          placeholder="Enter the time for the timer in seconds"
+          placeholder="Time in seconds"
           value={timer}
           onChange={(event) => setTimer(event.target.value)}
         />
-        <br />
-        <button onClick={handleSave} className="set-timer-btn">Set</button>
+        <button onClick={handleSave} className="set-timer-btn">
+          Set
+        </button>
       </div>
     </div>
   );

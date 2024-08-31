@@ -27,7 +27,7 @@ function App() {
 
   return (
     <>
-      <div className={`app-container ${mode ? "light-theme" : "dark-theme"}`}>
+      <div className={`app-container poppins-regular ${mode ? "light-theme" : "dark-theme"}`}>
         <BlobAnimation />
         <div className="buttons space-x-4 absolute right-10 top-[28px] lg:top-[40px] z-50">
           <button onClick={toggleCard} className="cursor-pointer">
